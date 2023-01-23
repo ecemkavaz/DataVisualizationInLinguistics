@@ -1,6 +1,29 @@
 version: "3.9"
 
 services:
+  rasa:
+    image: rasa-server:latest
+    build: .
+    volumes:
+    - ./rasa/data:/code/data
+    - ./rasa/actions:/code/actions
+    command: bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p 8000"
+    ports:
+      - "5005:5005"
+    public: true
+    networks:
+      - all
+  rasa-actions:
+    image: rasa-server:latest
+    build: .
+    volumes:
+      - ./rasa/actions:/code/actions
+    command: bash -c "rasa run actions"
+    ports:
+      - "5055:5055"
+    public: true
+    networks:
+      - all
   db:
     image: postgres
     environment:
@@ -18,3 +41,8 @@ services:
       - "8000:8000"
     depends_on:
       - db
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable.ipv6: "true"

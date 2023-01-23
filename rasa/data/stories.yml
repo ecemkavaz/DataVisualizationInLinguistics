@@ -231,7 +231,9 @@ stories:
     - intent: greet
     - action: utter_offers_help
     - intent: help_what_can_you_do
-    - action: utter_help_what_can_you_do
+    - action: utter_help_what_can_you_do_one
+    - action: utter_help_what_can_you_do_two
+    - action: utter_help_what_can_you_do_three
     - intent: most_toxic_thread
     - action: utter_most_toxic_thread
     - action: utter_explain_pop_up_toxic
@@ -256,7 +258,9 @@ stories:
     - intent: greet
     - action: utter_offers_help
     - intent: help_what_can_you_do
-    - action: utter_help_what_can_you_do
+    - action: utter_help_what_can_you_do_one
+    - action: utter_help_what_can_you_do_two
+    - action: utter_help_what_can_you_do_three
     - intent: largest_thread
     - action: utter_largest_thread
     - action: utter_explain_pop_up_largest
@@ -418,7 +422,9 @@ stories:
     - intent: greet
     - action: utter_offers_help
     - intent: help_what_can_you_do
-    - action: utter_help_what_can_you_do
+    - action: utter_help_what_can_you_do_one
+    - action: utter_help_what_can_you_do_two
+    - action: utter_help_what_can_you_do_three
     - intent: widest_level
     - action: utter_widest_level
     - action: utter_explain_pop_up_widest

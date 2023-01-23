@@ -786,7 +786,7 @@
         existingStorage = existingStorage ? JSON.parse(existingStorage) : {};
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:5005/conversations/" + existingStorage["session_id"] + "/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio", true);
+        xhr.open("POST", "http://datavisualizationinlinguistics.herokuapp.com:5005/conversations/" + existingStorage["session_id"] + "/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
         "name": "generate_response_message",
@@ -805,7 +805,7 @@
         existingStorage = existingStorage ? JSON.parse(existingStorage) : {};
 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:5005/conversations/" + existingStorage["session_id"] + "/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio", true);
+        xhr.open("POST", "http://datavisualizationinlinguistics.herokuapp.com:5005/conversations/" + existingStorage["session_id"] + "/trigger_intent?token=DataVisualizationInLinguisticsSecretToken&include_events=NONE&output_channel=socketio", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
         "name": intent,
@@ -910,7 +910,7 @@
                 subtitle: getChatSubtitle(),
                 initPayload: generateInitPayload(),
                 customData: { language: "en" },
-                socketUrl: "http://localhost:5005",
+                socketUrl: "http://datavisualizationinlinguistics.herokuapp.com:5005",
                 profileAvatar:getProfileAvatar(),
                 showFullScreenButton: true,
                 customMessageDelay: (message) => {

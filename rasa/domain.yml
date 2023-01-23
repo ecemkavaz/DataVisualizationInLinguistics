@@ -465,8 +465,11 @@ responses:
 
 
   utter_help_highlight:
-    - text: "Highlight function will show only the comments that include the selected feature.
-    You can ask me to show you or select features from the left bar."
+    - text: "Highlight function will show only the comments that include the selected features. \ \n
+    You can select features: \ \n
+    - From the left bar \ \n
+    - Asking me"
+
       image: "https://ecemkavaz.github.io/imagesRasa/highlight.png"
 
   utter_help_AND:
@@ -561,10 +564,14 @@ responses:
           payload: '/widest_level'
 
 
+  utter_help_what_can_you_do_one:
+    - text: "I am here to guide you through the visualisation analysis"
 
-  utter_help_what_can_you_do:
-    - text: "I am here to guide you through analysis.
-             I can show you sub structures, highlight features, or answer questions about the features of the tool."
+  utter_help_what_can_you_do_two:
+    - text: "I can show you regions of the tree, highlight features, or help you with the tool"
+
+  utter_help_what_can_you_do_three:
+    - text: "Here you have some actions to do:"
       buttons:
         - title: "the largest thread"
           payload: '/largest_thread'
