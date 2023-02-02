@@ -10,7 +10,6 @@ services:
     command: bash -c "rm -rf .rasa/* && rasa train && rasa run -m models --enable-api --auth-token DataVisualizationInLinguisticsSecretToken --cors \"*\" -p 8000"
     ports:
       - "5005:5005"
-    public: true
     networks:
       - all
   rasa-actions:
@@ -21,7 +20,6 @@ services:
     command: bash -c "rasa run actions"
     ports:
       - "5055:5055"
-    public: true
     networks:
       - all
   db:
